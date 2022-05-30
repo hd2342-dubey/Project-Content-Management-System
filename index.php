@@ -22,8 +22,8 @@ if(isset($_POST['name'])){
     $phone = $_POST['phone'];
     $desc = $_POST['desc'];
    
-    $sql = "INSERT INTO `travel_trip` . `travel_trip` (`Name`, `Age`, `Gender`, `E-Mail`, `Phone No.`, `Other Information`, `dt`) VALUES ('$name', '$age', '$gender', '$email', '$phone', '$desc', current_timestamp());";
-                         //Database name  //Table name
+        $sql = "INSERT INTO `trip`.`trip` (`name`, `age`, `gender`, `email`, `phone`, `other`, `dt`) VALUES ('$name', '$age', '$gender', '$email', '$phone', '$desc', current_timestamp());";    
+
     // Execute the query
     if($con->query($sql) == true){
         // Flag for successful insertion
